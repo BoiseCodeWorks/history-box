@@ -1,0 +1,16 @@
+<html ng-app="history-box">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-controller="HistoryController as hc">
+    
+    <input ng-model="hc.command" ng-keyUp="hc.traverseCommands($event)" />
+    <button ng-click="hc.saveToHistory(hc.command)">GO</button>
+    
+    <button ng-click="hc.command = 'Whats Up Doc'">Bugs Bunny</button>
+    <h1>CurrentIndex: {{hc.currentIndex}}</h1>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
